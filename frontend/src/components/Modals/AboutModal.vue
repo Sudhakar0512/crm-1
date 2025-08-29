@@ -5,29 +5,13 @@
         <div class="flex justify-center">
           <div class="flex flex-col items-center">
             <CRMLogo class="mb-3 size-12" />
-            <h3 class="font-semibold text-xl text-ink-gray-9">Frappe CRM</h3>
+            <h3 class="font-semibold text-xl text-ink-gray-9">Pumo CRM</h3>
           </div>
         </div>
         <hr class="border-t my-3 mx-2" />
-        <div>
-          <a
-            v-for="link in links"
-            :key="link.label"
-            class="flex py-2 px-2 hover:bg-surface-gray-1 rounded cursor-pointer"
-            target="_blank"
-            :href="link.url"
-          >
-            <component
-              v-if="link.icon"
-              :is="link.icon"
-              class="size-4 mr-2 text-ink-gray-7"
-            />
-            <span class="text-base text-ink-gray-8">
-              {{ link.label }}
-            </span>
-          </a>
-        </div>
-        <hr class="border-t my-3 mx-2" />
+        <p class="text-center text-sm text-ink-gray-7 mb-4 px-4">
+          End-to-end management solution for our internal purposes — streamlined and efficient workflow with Pumo CRM.
+        </p>
         
       </div>
     </template>
@@ -45,36 +29,5 @@ import TelegramIcon from '@/components/Icons/TelegramIcon.vue'
 
 let show = defineModel()
 
-let links = [
-  {
-    label: __('Website'),
-    url: 'https://frappe.io/crm',
-    icon: LucideGlobe,
-  },
-  {
-    label: __('GitHub Repository'),
-    url: 'https://github.com/frappe/crm',
-    icon: LucideGitHub,
-  },
-  {
-    label: __('Documentation'),
-    url: 'https://docs.frappe.io/crm',
-    icon: LucideBookOpen,
-  },
-  {
-    label: __('Telegram Channel'),
-    url: 'https://t.me/frappecrm',
-    icon: TelegramIcon,
-  },
-  {
-    label: __('Report an Issue'),
-    url: 'https://github.com/frappe/crm/issues',
-    icon: LucideBug,
-  },
-  {
-    label: __('Contact Support'),
-    url: 'https://support.frappe.io',
-    icon: LucideHeadset,
-  },
-]
+let links = []
 </script>
